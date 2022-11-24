@@ -1,0 +1,46 @@
+/* styles.css */
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.overall-layout {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex: 1 0 auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: #F9FAF8;
+    background-color: #1f2937;
+    font-size: 24px;
+}
+
+
+.page-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.left,
+.right,
+.center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.sketch-box {
+    display: block;
+    width: 400px;
+    height: 400px;
+
+}
