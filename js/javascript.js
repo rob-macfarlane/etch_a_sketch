@@ -49,16 +49,15 @@ document.querySelectorAll('.sketch-element').forEach(item => {
         }
     });
 });
-
 //end relation to drawing functionality 
 
+
+//reset the draw space to all white
 const btn = document.querySelector('#reset-draw-space');
 btn.addEventListener('click', resetDrawSpace);
 
-
 function resetDrawSpace() {
     sketchElements = document.querySelectorAll('.sketch-element');
-    console.log((sketchElements.length))
     for (let i =0; i < sketchElements.length; i++) {
         sketchElements[i].style.backgroundColor = 'white';
     }
