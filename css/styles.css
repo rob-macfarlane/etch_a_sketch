@@ -39,8 +39,16 @@ body {
 }
 
 .sketch-box {
-    display: block;
+    display: flex;
     width: 400px;
     height: 400px;
+    flex-direction: row;
+    flex-wrap: wrap;
 
+}
+
+.sketch-element {
+    display: block;
+    width: 10px;
+    height: 10px;
 }
