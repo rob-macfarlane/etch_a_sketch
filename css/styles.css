@@ -40,8 +40,8 @@ body {
 
 .sketch-box {
     display: flex;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     flex-direction: row;
     flex-wrap: wrap;
     border-style: solid;

@@ -1,9 +1,11 @@
 
 const sketchBox = document.querySelector('.sketch-box');
 
-numberOfBoxes = 5000;
 
-boxSideLength = 600 / Math.sqrt(numberOfBoxes);
+box_per_side = 50
+numberOfBoxes = box_per_side * box_per_side;
+
+boxSideLength = 500 / Math.sqrt(numberOfBoxes);
 lengthString = boxSideLength + 'px'
 console.log(lengthString)
 
@@ -16,6 +18,8 @@ for (let i = 0; i < numberOfBoxes; i++){
     sketchBox.appendChild(sketchElement);
 }
 
+
+//related to drawing functionality
 var drawState = false;
 window.addEventListener("mousedown", event => {
 
@@ -45,3 +49,20 @@ document.querySelectorAll('.sketch-element').forEach(item => {
         }
     });
 });
+
+//end relation to drawing functionality 
+
+const btn = document.querySelector('#reset-draw-space');
+btn.addEventListener('click', resetDrawSpace);
+
+
+function resetDrawSpace() {
+    sketchElements = document.querySelectorAll('.sketch-element');
+    console.log((sketchElements.length))
+    for (let i =0; i < sketchElements.length; i++) {
+        sketchElements[i].style.backgroundColor = 'white';
+    }
+    // sketchBox.style.borderColor = 'green';
+};
+
+
