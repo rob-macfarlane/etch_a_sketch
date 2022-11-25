@@ -40,16 +40,17 @@ body {
 
 .sketch-box {
     display: flex;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     flex-direction: row;
     flex-wrap: wrap;
+    border-style: solid;
+    border-color: green;
+
 
 }
 
 .sketch-element {
     display: block;
-    width: 10px;
-    height: 10px;
     /* padding: 1px; */
 }
