@@ -74,8 +74,8 @@ function addDrawFunctionality() {
 }
 //end relation to drawing functionality 
 
-const deleteButton = document.querySelector('#delete-elements');
-deleteButton.addEventListener('click', removeAllChildren);
+// const deleteButton = document.querySelector('#delete-elements');
+// deleteButton.addEventListener('click', removeAllChildren);
 
 
 
@@ -101,9 +101,11 @@ output.innerHTML = slider.value + ' x ' + slider.value; // Display the default s
 slider.oninput = function() {
 
     output.innerHTML = this.value + ' x ' + this.value;
+}
+
+slider.onchange = function () {
     removeAllChildren(sketchBox);
     setSketchBoxes(this);
     setToFalse();
     addDrawFunctionality();
-
 }
