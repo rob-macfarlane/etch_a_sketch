@@ -28,7 +28,7 @@ function removeAllChildren() {
     console.log('delete');
     console.log(sketchBox.firstChild);
     sketchBox.removeChild(sketchBox.lastChild);
-    while (sketchBox.firstchild) {
+    while (sketchBox.firstChild) {
         sketchBox.removeChild(sketchBox.lastChild);
     }
 }
