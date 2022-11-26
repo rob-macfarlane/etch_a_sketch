@@ -1,22 +1,39 @@
 
 const sketchBox = document.querySelector('.sketch-box');
+const slide = document.querySelector('.slider');
+
+console.log(slide.value);
+
+setSketchBoxes(slide);
 
 
-box_per_side = 50
-numberOfBoxes = box_per_side * box_per_side;
+function setSketchBoxes(slide) {
+    box_per_side = slide.value;
+    numberOfBoxes = box_per_side * box_per_side;
+    
+    boxSideLength = 500 / Math.sqrt(numberOfBoxes);
+    lengthString = boxSideLength + 'px';
+    console.log(lengthString);
+    for (let i = 0; i < numberOfBoxes; i++){
+        const sketchElement = document.createElement('div');
+        sketchElement.classList.add('sketch-element');
+        sketchElement.style.width = lengthString
+        sketchElement.style.height = lengthString
+        sketchBox.appendChild(sketchElement);
+    }
+};
 
-boxSideLength = 500 / Math.sqrt(numberOfBoxes);
-lengthString = boxSideLength + 'px'
-console.log(lengthString)
 
-
-for (let i = 0; i < numberOfBoxes; i++){
-    const sketchElement = document.createElement('div');
-    sketchElement.classList.add('sketch-element');
-    sketchElement.style.width = lengthString
-    sketchElement.style.height = lengthString
-    sketchBox.appendChild(sketchElement);
+function removeAllChildren() {
+    console.log('delete');
+    console.log(sketchBox.firstChild);
+    sketchBox.removeChild(sketchBox.lastChild);
+    while (sketchBox.firstchild) {
+        sketchBox.removeChild(sketchBox.lastChild);
+    }
 }
+
+
 
 
 //related to drawing functionality
@@ -51,6 +68,11 @@ document.querySelectorAll('.sketch-element').forEach(item => {
 });
 //end relation to drawing functionality 
 
+const deleteButton = document.querySelector('#delete-elements');
+deleteButton.addEventListener('click', removeAllChildren);
+
+
+
 
 //reset the draw space to all white
 const btn = document.querySelector('#reset-draw-space');
@@ -71,6 +93,9 @@ output.innerHTML = slider.value + ' x ' + slider.value; // Display the default s
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
-    
+
     output.innerHTML = this.value + ' x ' + this.value;
+    removeAllChildren(sketchBox);
+    setSketchBoxes(this);
+
 }
