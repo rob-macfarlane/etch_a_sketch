@@ -96,5 +96,5 @@ slider.onchange = function () {
     addDrawFunctionality();
 }
 
-right.style.width = (((pageContent.clientWidth - centerContainer.clientWidth) / 2) + 'px');
-left.style.width = (((pageContent.clientWidth - centerContainer.clientWidth) / 2) + 'px');
+right.style.width = (((pageContent.clientWidth - centerContainer.clientWidth) / 2) - 10 + 'px');
+left.style.width = (((pageContent.clientWidth - centerContainer.clientWidth) / 2) - 10 + 'px');
