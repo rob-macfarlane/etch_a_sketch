@@ -5,7 +5,8 @@ const slide = document.querySelector('.slider');
 console.log(slide.value);
 
 setSketchBoxes(slide);
-
+setToFalse();
+addDrawFunctionality();
 
 function setSketchBoxes(slide) {
     box_per_side = slide.value;
@@ -27,7 +28,7 @@ function setSketchBoxes(slide) {
 function removeAllChildren() {
     console.log('delete');
     console.log(sketchBox.firstChild);
-    sketchBox.removeChild(sketchBox.lastChild);
+    // sketchBox.removeChild(sketchBox.lastChild);
     while (sketchBox.firstChild) {
         sketchBox.removeChild(sketchBox.lastChild);
     }
@@ -50,22 +51,27 @@ window.addEventListener("mouseup", event => {
     }
 });
 
-document.querySelectorAll(':not(.sketch-box .sketch-element').forEach(item => {
-    item.addEventListener('mouseenter', event => {
-        drawState = false;
+function setToFalse() {
+    document.querySelectorAll(':not(.sketch-box .sketch-element').forEach(item => {
+        item.addEventListener('mouseenter', event => {
+            drawState = false;
+        });
     });
-});
+}
 
-document.querySelectorAll('.sketch-element').forEach(item => {
-    item.addEventListener('mousedown', e => {
-        e.preventDefault();
+
+function addDrawFunctionality() {
+    document.querySelectorAll('.sketch-element').forEach(item => {
+        item.addEventListener('mousedown', e => {
+            e.preventDefault();
+        });
+        item.addEventListener('mouseover', event => {
+            if (drawState) {
+                item.style.backgroundColor = 'black';
+            }
+        });
     });
-    item.addEventListener('mouseover', event => {
-        if (drawState) {
-            item.style.backgroundColor = 'black';
-        }
-    });
-});
+}
 //end relation to drawing functionality 
 
 const deleteButton = document.querySelector('#delete-elements');
@@ -97,5 +103,7 @@ slider.oninput = function() {
     output.innerHTML = this.value + ' x ' + this.value;
     removeAllChildren(sketchBox);
     setSketchBoxes(this);
+    setToFalse();
+    addDrawFunctionality();
 
 }
