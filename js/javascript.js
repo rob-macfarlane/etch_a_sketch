@@ -1,4 +1,3 @@
-
 const sketchBox = document.querySelector('.sketch-box');
 const slide = document.querySelector('.slider');
 
@@ -24,7 +23,6 @@ function setSketchBoxes(slide) {
     }
 };
 
-
 function removeAllChildren() {
     console.log('delete');
     console.log(sketchBox.firstChild);
@@ -33,9 +31,6 @@ function removeAllChildren() {
         sketchBox.removeChild(sketchBox.lastChild);
     }
 }
-
-
-
 
 //related to drawing functionality
 var drawState = false;
@@ -59,7 +54,6 @@ function setToFalse() {
     });
 }
 
-
 function addDrawFunctionality() {
     document.querySelectorAll('.sketch-element').forEach(item => {
         item.addEventListener('mousedown', e => {
@@ -74,12 +68,6 @@ function addDrawFunctionality() {
 }
 //end relation to drawing functionality 
 
-// const deleteButton = document.querySelector('#delete-elements');
-// deleteButton.addEventListener('click', removeAllChildren);
-
-
-
-
 //reset the draw space to all white
 const btn = document.querySelector('#reset-draw-space');
 btn.addEventListener('click', resetDrawSpace);
@@ -91,7 +79,6 @@ function resetDrawSpace() {
     }
     // sketchBox.style.borderColor = 'green';
 };
-
 
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
