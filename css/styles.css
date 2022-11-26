@@ -99,3 +99,8 @@ body {
     cursor: pointer; /* Cursor on hover */
 }
 
+#grid-size {
+    display: flex;
+    justify-content: center;
+
+}
