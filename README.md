@@ -6,4 +6,4 @@ Page that has an "etch-a-sketch" on it where you can click and drag to draw. Thi
 3. More javascript functions and event listners to help run code on certain events
 4. The range input and how to get values from this to update a variable
 
-![image](https://user-images.githubusercontent.com/77376019/204077357-7ddee642-d025-4895-9ebe-f6251d32144f.png)
+![image](https://user-images.githubusercontent.com/77376019/204077439-3a57f996-33cf-446f-bd54-b4eb20db8f20.png)
