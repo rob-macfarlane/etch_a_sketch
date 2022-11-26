@@ -16,6 +16,18 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-header {
+    display: flex;
+    /* align-items: center; */
+    color: #F9FAF8;
+}
+
+.title {
+    display: flex;
     justify-content: center;
     color: #F9FAF8;
     /* background-color: #1f2937; */
@@ -52,16 +64,16 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     border-style: solid;
-    border-color: green;
-
-
+    border-color: rgb(10, 82, 165);
+    /* -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc; */
 }
 
 .sketch-element {
     display: block;
     /* padding: 1px; */
-    background-color: white;
-
+    background-color: rgb(240, 238, 238);
 }
 
 
@@ -71,7 +83,7 @@ body {
     flex-direction: column; 
     padding: 10px;
     border: solid;
-    border-color: black;
+    border-color: rgb(10, 82, 165);
     background-color: #9cc1f5;
 }
 
@@ -97,28 +109,28 @@ body {
     width: 25px; /* Set a specific slider handle width */
     border-radius: 50%;
     height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
+    background: rgb(10, 82, 165);
     cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
+    background: rgb(10, 82, 165); 
     cursor: pointer; /* Cursor on hover */
     border-radius: 50%;
-
 }
 
 #grid-size {
     display: flex;
     justify-content: center;
-
+    padding: 5px;
 }
 
 .buttonContainer,
 .slidecontainer {
     margin-left: 50%;
+    border-top: none;
 }
 
 .buttonContainer {
@@ -126,13 +138,16 @@ body {
     display: flex;
     background-color: #9cc1f5;
     border: solid;
-    border-color: black;
-   
+    border-color: rgb(10, 82, 165);;
 }
 
 #reset-draw-space {
     display: flex;
     flex-grow: 1;
     justify-content: center;
+}
 
+.footer {
+    padding: 10px;
+    text-align: right;
 }

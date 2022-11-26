@@ -75,7 +75,7 @@ btn.addEventListener('click', resetDrawSpace);
 function resetDrawSpace() {
     sketchElements = document.querySelectorAll('.sketch-element');
     for (let i =0; i < sketchElements.length; i++) {
-        sketchElements[i].style.backgroundColor = 'white';
+        sketchElements[i].style.backgroundColor =  'rgb(' + 240 + ',' + 238 + ',' + 238 + ')';
     }
     // sketchBox.style.borderColor = 'green';
 };
