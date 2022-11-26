@@ -42,6 +42,7 @@ body {
 
 .left {
     flex-direction: column;
+    margin: 10px;
 }
 
 .sketch-box {
