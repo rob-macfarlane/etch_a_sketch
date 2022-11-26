@@ -34,11 +34,10 @@ body {
 }
 
 .left,
-.right,
 .center {
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .left {

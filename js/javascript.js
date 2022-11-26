@@ -1,7 +1,10 @@
 const sketchBox = document.querySelector('.sketch-box');
 const slide = document.querySelector('.slider');
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
+const pageContent = document.querySelector('.page-content');
+const centerContainer = document.querySelector('.center');
 
-console.log(slide.value);
 
 setSketchBoxes(slide);
 setToFalse();
@@ -13,7 +16,6 @@ function setSketchBoxes(slide) {
     
     boxSideLength = 500 / Math.sqrt(numberOfBoxes);
     lengthString = boxSideLength + 'px';
-    console.log(lengthString);
     for (let i = 0; i < numberOfBoxes; i++){
         const sketchElement = document.createElement('div');
         sketchElement.classList.add('sketch-element');
@@ -24,8 +26,6 @@ function setSketchBoxes(slide) {
 };
 
 function removeAllChildren() {
-    console.log('delete');
-    console.log(sketchBox.firstChild);
     // sketchBox.removeChild(sketchBox.lastChild);
     while (sketchBox.firstChild) {
         sketchBox.removeChild(sketchBox.lastChild);
@@ -95,3 +95,6 @@ slider.onchange = function () {
     setToFalse();
     addDrawFunctionality();
 }
+
+right.style.width = (((pageContent.clientWidth - centerContainer.clientWidth) / 2) + 'px');
+left.style.width = (((pageContent.clientWidth - centerContainer.clientWidth) / 2) + 'px');
