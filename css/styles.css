@@ -4,6 +4,7 @@ body {
     display: flex;
     height: 100vh;
     margin: 0;
+    background-color: #9cc1f5;
 }
 
 .overall-layout {
@@ -15,10 +16,11 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     color: #F9FAF8;
-    background-color: #1f2937;
-    font-size: 24px;
+    /* background-color: #1f2937; */
+    font-size: 46px;
+    padding-top: 100px;
 }
 
 
@@ -27,6 +29,7 @@ body {
     flex-grow: 1;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
 }
 
